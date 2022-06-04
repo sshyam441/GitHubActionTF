@@ -1,12 +1,11 @@
 terraform {
-  backend "azurerm" {
+ backend "azurerm" {
   resource_group_name  = "rg-tf-state"
   storage_account_name = "stdgtftsate"
   container_name       = "githubaction"
   key = "tfstate"
  }
 }
-
 provider "azurerm" {
   features {
 
